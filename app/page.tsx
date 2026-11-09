@@ -22,9 +22,12 @@ export default function Home() {
           >
             Login
           </Link>
-          <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 shadow">
+          <Link 
+            href="/signup" 
+            className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 shadow inline-block"
+          >
             Sign Up
-          </button>
+          </Link>
         </div>
       </header>
 
@@ -39,10 +42,13 @@ export default function Home() {
             Create beautiful forms, gather responses, and analyze results — all in one place.
           </p>
           <div className="flex space-x-4">
-            <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 shadow flex items-center space-x-2">
+            <Link 
+              href="/signup"
+              className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 shadow flex items-center space-x-2 inline-flex"
+            >
               <span>Get Started</span>
               <span>→</span>
-            </button>
+            </Link>
             <button className="border border-slate-300 px-6 py-3 rounded-lg font-medium hover:bg-slate-100">
               Learn More
             </button>
