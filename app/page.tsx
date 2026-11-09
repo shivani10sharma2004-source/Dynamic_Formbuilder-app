@@ -16,8 +16,15 @@ export default function Home() {
           <Link href="#contact" className="hover:text-indigo-600">Contact</Link>
         </nav>
         <div className="flex space-x-4">
-          <button className="text-indigo-600 font-medium px-4 py-2 hover:bg-slate-100 rounded-lg">Login</button>
-          <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 shadow">Sign Up</button>
+          <Link 
+            href="/login" 
+            className="text-indigo-600 font-medium px-4 py-2 hover:bg-slate-100 rounded-lg inline-block"
+          >
+            Login
+          </Link>
+          <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 shadow">
+            Sign Up
+          </button>
         </div>
       </header>
 
