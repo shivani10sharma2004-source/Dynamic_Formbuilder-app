@@ -1,9 +1,10 @@
 "use client";
 
+import { Suspense } from 'react';
 import { useEffect, useState, useRef } from 'react';
 import { useParams } from 'next/navigation';
 
-export default function PublicFormViewer() {
+function FormContent() {
   const params = useParams();
   const formId = params.formId as string;
 
@@ -23,7 +24,7 @@ export default function PublicFormViewer() {
   useEffect(() => {
     const fetchForm = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/forms/${formId}`);
+        const res = await fetch(`https://dynamic-formbuilder-app-2.onrender.com/api/forms/${formId}`);
         if (!res.ok) {
           throw new Error('Form not found or link is invalid.');
         }
@@ -290,5 +291,13 @@ export default function PublicFormViewer() {
         </div>
       </form>
     </div>
+  );
+}
+
+export default function PublicFormViewer() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-slate-50 font-bold text-slate-500">Loading...</div>}>
+      <FormContent />
+    </Suspense>
   );
 }

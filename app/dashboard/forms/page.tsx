@@ -14,7 +14,7 @@ export default function MyFormsPage() {
   useEffect(() => {
     const fetchForms = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/forms');
+        const res = await fetch('https://dynamic-formbuilder-app-2.onrender.com/api/forms');
         if (res.ok) {
           const data = await res.json();
           if (data && data.length > 0) {

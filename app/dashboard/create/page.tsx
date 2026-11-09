@@ -73,7 +73,7 @@ export default function CreateFormPage() {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/api/forms/save', {
+      const res = await fetch('https://dynamic-formbuilder-app-2.onrender.com/api/forms/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newForm)
@@ -135,7 +135,7 @@ export default function CreateFormPage() {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/api/forms/save', {
+      const res = await fetch('https://dynamic-formbuilder-app-2.onrender.com/api/forms/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newForm)

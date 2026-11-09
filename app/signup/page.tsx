@@ -27,7 +27,7 @@ export default function SignupPage() {
     setMessage("Sending OTP to your email...");
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/register", {
+      const res = await fetch("https://dynamic-formbuilder-app-2.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -51,7 +51,7 @@ export default function SignupPage() {
     setMessage("Verifying OTP...");
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/verify-otp", {
+      const res = await fetch("https://dynamic-formbuilder-app-2.onrender.com/api/auth/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: formData.email, otp }),
