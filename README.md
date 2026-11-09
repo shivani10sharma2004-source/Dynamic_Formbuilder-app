@@ -94,4 +94,4 @@ npm run dev
 - [ ] Drag-and-drop file upload interface (integration with Cloudinary/AWS S3).
 
 ---
-*Built with ❤️ by [Your Name]*
+*Built with  by [Shivani Sharma]*
