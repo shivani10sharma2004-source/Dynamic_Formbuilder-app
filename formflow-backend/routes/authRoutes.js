@@ -5,10 +5,9 @@ const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
 const User = require('../models/user');
 
-// Email bhejne ka setup (Updated for Brevo SMTP)
+// Email bhejne ka setup (Updated for Gmail SMTP)
 const transporter = nodemailer.createTransport({
-  host: "smtp-relay.brevo.com",
-  port: 2525,
+  service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
