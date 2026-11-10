@@ -8,9 +8,8 @@ const User = require('../models/user');
 // Email bhejne ka setup (Updated for Gmail SMTP)
 // Email bhejne ka setup (Explicit Gmail Settings for Render)
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true, // true for 465 port
+  host: "smtp-relay.brevo.com",
+  port: 2525,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
