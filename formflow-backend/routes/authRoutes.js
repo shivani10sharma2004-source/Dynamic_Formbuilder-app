@@ -47,8 +47,9 @@ router.post('/register', async (req, res) => {
     }
 
     // Email send karein
+    // Email send karein
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: 'shivani10sharma2004@gmail.com', // Yahan EMAIL_USER hata kar sidha apni id likh do
       to: email,
       subject: 'FormFlow - Verify your Email',
       html: `<h2>Welcome to FormFlow!</h2><p>Your OTP for registration is: <strong>${otp}</strong></p><p>This OTP is valid for 10 minutes.</p>`
