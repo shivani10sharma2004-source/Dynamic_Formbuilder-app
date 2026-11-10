@@ -55,27 +55,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Hero Illustration Box */}
-        <div className="mt-10 md:mt-0 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 w-full max-w-md">
-          <div className="flex items-center justify-between mb-4 border-b pb-2">
-            <div className="flex space-x-1.5">
-              <div className="w-3 h-3 rounded-full bg-red-400"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-              <div className="w-3 h-3 rounded-full bg-green-400"></div>
-            </div>
-            <span className="text-xs font-semibold text-slate-400">Customer Feedback Form</span>
-          </div>
-          <div className="space-y-3">
-            <div className="text-xs font-medium text-slate-600">Your opinion matters!</div>
-            <div className="h-9 bg-slate-50 border border-slate-200 rounded px-3 flex items-center text-xs text-slate-400">Enter your name</div>
-            <div className="h-9 bg-slate-50 border border-slate-200 rounded px-3 flex items-center text-xs text-slate-400">Select option</div>
-            <div className="flex items-center space-x-2 text-xs text-slate-600 pt-1">
-              <input type="checkbox" className="rounded border-slate-300" />
-              <span>I agree to the terms</span>
-            </div>
-            <div className="h-9 bg-indigo-600 rounded text-white text-xs flex items-center justify-center font-medium mt-2">Submit</div>
-          </div>
-        </div>
+        {/* Feedback form box bas yahan se hata diya gaya hai, baaki sab waisa hi hai */}
+        
       </section>
 
       {/* Features Section */}
