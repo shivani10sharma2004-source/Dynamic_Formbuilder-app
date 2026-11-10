@@ -5,9 +5,10 @@ const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
 const User = require('../models/user');
 
-// Email bhejne ka setup
+// Email bhejne ka setup (Updated for Brevo SMTP)
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: "smtp-relay.brevo.com",
+  port: 2525,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
@@ -52,13 +53,9 @@ router.post('/register', async (req, res) => {
       html: `<h2>Welcome to FormFlow!</h2><p>Your OTP for registration is: <strong>${otp}</strong></p><p>This OTP is valid for 10 minutes.</p>`
     };
 
-    // TEMPORARY BYPASS: Email bhejna band kiya hai taaki server error na aaye
     await transporter.sendMail(mailOptions);
     
-  
-
-
-    res.status(200).json({ message: 'OTP sent! Check VS Code Terminal.' });
+    res.status(200).json({ message: 'OTP sent successfully!' });
 
   } catch (error) {
     console.log("SERVER MEIN YEH ERROR AAYA HAI:", error);
@@ -66,7 +63,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// 2. VERIFY OTP ROUTE (Naya route)
+// 2. VERIFY OTP ROUTE
 router.post('/verify-otp', async (req, res) => {
   try {
     const { email, otp } = req.body;
@@ -90,7 +87,7 @@ router.post('/verify-otp', async (req, res) => {
   }
 });
 
-// 3. LOGIN ROUTE (Updated: Sirf verified users login kar payenge)
+// 3. LOGIN ROUTE
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
